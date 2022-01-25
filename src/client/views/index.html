@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            NPL APP
+        </div>
+    </header>
+    <main>
+        <!-- <section>
+                <form class="" onsubmit="return handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            </section> -->
+
+        <section>
+            <form class="">
+                <input id="name" type="text" name="input" value="" placeholder="Enter the news page URL">
+                <input id="submitBtn" type="submit" name="" value="submit">
+            </form>
+        </section>
+        <section class="result">
+            <p><span>Status: </span><span id="loading"></span></p> <br />
+            <div>
+                <p><span>Confidence: </span><span id="confidence"></span></p>
+
+            </div><br />
+            <div>
+                <p><span>Subjectivity: </span><span id="subjectivity"></span></p>
+
+            </div>
+            </div><br />
+            <div>
+                <p><span> Irony: </span> <span id="irony"></span></p>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
